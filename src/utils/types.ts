@@ -231,3 +231,22 @@ export type LandingPageNewsApodHubbles = {
   apod: ApodType | null;
   hubbles: HubbleImage[] | null;
 };
+
+export type Footprint = {
+  id: number;
+  value: number;
+};
+
+export type TransportResponse = {
+  name: string;
+  slug: string;
+  ecv: number;
+  footprint: number;
+  footprintDetail: Footprint[];
+};
+
+export type CarbonResponse = {
+  id: number;
+  name: string;
+  value: number;
+};

@@ -5,6 +5,10 @@ const datastroAPI = "https://www.datastro.eu/api/explore/v2.1/catalog/datasets/n
 const nasaAPI = "https://api.nasa.gov/planetary/apod";
 const webbAPI = "https://api.jwstapi.com/all/type/jpg";
 const spacexAPI = "https://api.spacexdata.com/v3/";
+const transportAPI = "https://impactco2.fr/api/v1/thematiques/ecv/4?detail=1&language=en";
+// ex: https://impactco2.fr/api/v1/transport?km=100&displayAll=0&ignoreRadiativeForcing=0&occupencyRate=1&includeConstruction=0&language=fr
+const carbonAPI = "https://impactco2.fr/api/v1/";
+const cityAPI = "https://photon.komoot.io/api/";
 
 export const snapiCustomFetch = axios.create({
     baseURL: snapiAPI,
@@ -26,4 +30,18 @@ export const webbCustomFetch = axios.create({
 
 export const spacexCustomFetch = axios.create({
     baseURL: spacexAPI,
+});
+
+export const transportCustomFetch = axios.create({
+    baseURL: transportAPI,
+})
+
+export const carbonCustomFetch = axios.create({
+    baseURL: carbonAPI,
+    params: {},
+});
+
+export const cityCustomFetch = axios.create({
+    baseURL: cityAPI,
+    params: {},
 });
