@@ -7,4 +7,3 @@ export { default as Hubble } from "./Hubble";
 export { default as Webb } from "./Webb";
 export { default as SingleHubble } from "./SingleHubble";
 export { default as ErrorMain } from "./ErrorMain";
-export { default as Carbon } from "./Carbon";

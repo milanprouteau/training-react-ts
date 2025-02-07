@@ -9,6 +9,7 @@ const transportAPI = "https://impactco2.fr/api/v1/thematiques/ecv/4?detail=1&lan
 // ex: https://impactco2.fr/api/v1/transport?km=100&displayAll=0&ignoreRadiativeForcing=0&occupencyRate=1&includeConstruction=0&language=fr
 const carbonAPI = "https://impactco2.fr/api/v1/";
 const cityAPI = "https://photon.komoot.io/api/";
+const distanceApiUrl = "https://impactco2.fr/api/callGMap";
 
 export const snapiCustomFetch = axios.create({
     baseURL: snapiAPI,
@@ -38,10 +39,13 @@ export const transportCustomFetch = axios.create({
 
 export const carbonCustomFetch = axios.create({
     baseURL: carbonAPI,
-    params: {},
 });
 
 export const cityCustomFetch = axios.create({
     baseURL: cityAPI,
-    params: {},
 });
+
+export const tripDistanceFetch = axios.create({
+    baseURL: distanceApiUrl,
+    headers: { "Authorization": "Bearer 5da2a7d3-addf-4b3f-baae-7dfa2ef5b9a4"}
+})

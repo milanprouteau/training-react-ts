@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Apod, HomeLayout, Hubble, Landing, News, SpaceX, Webb, SingleHubble, ErrorMain, Carbon } from './pages';
+import { Apod, HomeLayout, Hubble, Landing, News, SpaceX, Webb, SingleHubble, ErrorMain } from './pages';
 import { newsPageLoader } from './pages/News';
 import { ErrorElement } from './components';
 import { hubblePageLoader } from './pages/Hubble';
@@ -10,7 +10,7 @@ import { webbPageLoader } from './pages/Webb';
 import { spacexPageLoader } from './pages/SpaceX';
 import { landingPageLoader } from './pages/Landing';
 import { singleHubblePageLoader } from './pages/SingleHubble';
-import { carbonLoader } from './pages/Carbon';
+import { CarbonPage, carbonLoader } from './pages/carbon/carbon.page';
 
 
 const router = createBrowserRouter([
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       { path: "apod", element: <Apod />, loader: apodPageLoader, errorElement: <ErrorElement/> },
       { path: "hubble", element: <Hubble />, loader: hubblePageLoader,  errorElement: <ErrorElement/> },
       { path: "hubble/:id", element: <SingleHubble />, loader: singleHubblePageLoader,  errorElement: <ErrorElement/> },
-      { path: "carbon", element: <Carbon />, loader: carbonLoader,  errorElement: <ErrorElement/> },
+      { path: "carbon", element: <CarbonPage />, loader: carbonLoader,  errorElement: <ErrorElement/> },
     ],
   },
 ]);
